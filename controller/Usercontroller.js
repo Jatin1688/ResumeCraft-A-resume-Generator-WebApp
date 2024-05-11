@@ -170,18 +170,18 @@ class usercontroller {
         try {
             //  res.render("registration"){
                 
-                    
-            const imagefile = {
-                name: 'profile-icon-design-free-vector.jpg',
-                data: Buffer.from('your_binary_data_here'), // Replace 'your_binary_data_here' with your actual binary data
-                size: 13415,
-                encoding: '7bit',
-                tempFilePath: 'D:\\codingnikhil\\nodeexpress\\tmp\\tmp-1-1712857980165',
-                truncated: false,
-                mimetype: 'image/jpeg',
-                md5: 'e496d7ccf54886ee88eaab0717c27250',
-                mv: function() {} // Placeholder function
-            };
+            const imagefile = req.files.image;
+            // const imagefile = {
+            //     name: 'profile-icon-design-free-vector.jpg',
+            //     data: Buffer.from('your_binary_data_here'), // Replace 'your_binary_data_here' with your actual binary data
+            //     size: 13415,
+            //     encoding: '7bit',
+            //     tempFilePath: 'D:\\codingnikhil\\nodeexpress\\tmp\\tmp-1-1712857980165',
+            //     truncated: false,
+            //     mimetype: 'image/jpeg',
+            //     md5: 'e496d7ccf54886ee88eaab0717c27250',
+            //     mv: function() {} // Placeholder function
+            // };
             
 
                 // console.log(imagefile)

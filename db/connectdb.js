@@ -1,8 +1,10 @@
 const mongoose= require('mongoose')
-const url="mongodb://0.0.0.0:27017/Resume_Generator"
-// const live_url="mongodb+srv://nikhilsahu78695:Nikhil123456@cluster0.6b9itae.mongodb.net/nodeexpress?retryWrites=true&w=majority"
+const live_url = 'mongodb+srv://jatinshakya811:kohli12345@cluster0.nr6jwok.mongodb.net/Resume_Generator?retryWrites=true&w=majority&appName=Cluster0'
+
+const local_url="mongodb://0.0.0.0:27017/Resume_Generator"
+
 const connectdb=()=>{
-    return mongoose.connect(url)
+    return mongoose.connect(live_url)
     .then(()=>{
         console.log("Connected Succeessfully")
     })
