@@ -1,0 +1,227 @@
+<%- include('./header.ejs') %>
+
+    <main>
+        <!-- Slider Section 1-->
+        <section>
+            <div class="carousel slide" data-bs-ride="carousel" data-interval="1000" id="button">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#button" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#button" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#button" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#button" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <img src="/image/slider images/allan_4x.jpg" alt="Resume" title="My Resume" class="Slider-image" />
+
+                        <div class="carousel-caption">
+                            <h2>"Let your resume tell the story of your success."</h2>
+                            <p>welcome To ResumeCraft!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/image/slider images/3f2d72156854263.636e449248a75.jpg" alt="Slider-image"
+                            class="Slider-image" />
+                        <div class="carousel-caption">
+                            <h2>"Presenting you, authentically, through your resume."</h2>
+                            <p>A team of passionate individuals!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/image/slider images/work-1315232_1280.jpg" alt="Slider-image" class="Slider-image" />
+                        <div class="carousel-caption">
+                            <h2>"Stand out in the crowd with a standout resume."</h2>
+                            <p>The most trusted brands!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/image/slider images/f8ea05156444501.63678cf8333a9.jpg" alt="Slider-image"
+                            class="Slider-image" />
+                        <div class="carousel-caption">
+                            <h2>"Elevate your career with a premium resume."</h2>
+                            <p>Elctronics & Furniture!</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Slider Section 1 End -->
+
+        <!-- Section 2 -->
+
+        <section>
+            <div class="container-fluid mt-4">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 col-sm-12">
+                            <p class="text-center fw-bolder animate__animated animate__fadeInDown ">ONLINE RESUME
+                                BUILDER</p>
+                            <h1 class="animate__animated animate__fadeInLeft text-center ">
+                                Only 2% of resumes make it past the first round. Be in the top 2%
+                            </h1>
+
+                            <p class="animate__animated animate__fadeInRight mediaPadding8rem intro mt-4 mb-4">
+
+                                Use professional field-tested resume templates that follow the exact ‘resume rules’
+                                employers look for. Easy to use and done within minutes - try now for free!
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-4 "></div>
+                                <div class="col-md-4 col-lg-12">
+                                    <% if(!tok){ %>
+                                        <center>
+                                        <a href="/login"><button class="btn-md button-md shadow-lg " style="margin-left: 0px;"> 
+                                            Create Resume
+                                        </button></a>
+                                    </center>
+                                        <% }else{ %>
+                                            <center><a href="/buildresume1"><button class="btn-lg button1">
+                                                Create My Resume
+                                            </button></a> </center>
+                                            <% } %>
+                                    
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+
+                            <a href=""><img
+                                    src="https://s3.resume.io/cdn-cgi/image/width=770,height=350,dpr=1.5,fit=crop,gravity=top,quality=75,format=auto/uploads/local_template_image/image/488/persistent-resource/dublin-resume-templates.jpg"
+                                    alt="" class="intro-image "></a>
+
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2 End-->
+
+
+        <!-- Section 3-->
+        <section>
+            <div class="container-fluid resumeGuide section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="https://resume.io/assets/landing/home/resume-maker/visual-87d13523d51b0859e264c50170556aa75eb349bfb1a8904ff460c6b89fc15808.svg"
+                                    alt="" width="100%" class="img-fluid">
+                            </div>
+
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5 ">
+                            <h2 class="text-center mt-5">Use the best resume maker as your guide</h2>
+                            <p class="fw-bold text-center text-dark mt-4 ">
+                                Getting that dream job can seem like an impossible task. We’re here to change that. Give
+                                yourself a real
+                                advantage with the best online resume maker: created by experts, improved by data,
+                                trusted by millions
+                                of professionals.
+                            </p>
+
+                            <div class="text-center ">
+                                <% if(!tok){ %>
+                                <a href="/login"><button class="btn-md button-md shadow-lg " style="margin-left: 0px;"> 
+                                    Create Resume
+                                </button></a>
+                                <% }else{ %>
+                                    <a href="/buildresume1"><button class="btn-md button-md shadow-lg " style="margin-left: 0px;"> 
+                                        Create Resume
+                                    </button></a>
+                                    <% } %>
+                                <button class=" button-md shadow-lg" style=" background: black; margin-left: 0px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" fill="currentColor"
+                                        class="margin-right: 12px;">
+                                        <path d="M1.5.9a1 1 0 00-1.5.8v10.6a1 1 0 001.5.8l9-5.2a1 1 0 000-1.8L1.5 1z">
+                                        </path>
+                                    </svg>
+                                    Watch video
+                                </button>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Section 3 End-->
+
+
+        <!-- FAQ's Section 5 -->
+        <div class="container-fluid mt-5">
+            <div class="row online-mention">
+                <div class="col-md-12 mt-3 mb-3">
+
+                    <h2 class="text-center">Frequently Asked Questions</h2>
+
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 col-sm-12 scrollable mt-2 text-white">
+
+                        <h5 class="fw-bold">What is a resume?</h5>
+                        <span>"A resume is a document that provides a summary of a person’s work experience, skills,
+                            education, and accomplishments. Resumes are typically used when applying for a job to
+                            showcase an individual’s qualifications for a specific role."</span>
+                        <hr>
+                        <h5 class="fw-bold ">How long should a resume be?</h5>
+                        <span>"The ideal length for a resume is generally one to two pages. Keep in mind that hiring
+                            managers often have limited time to review applications, so keeping resumes as concise and
+                            to the point as possible increases the chance that your resume gets noticed."</span>
+                        <hr>
+                        <h5 class="fw-bold ">How far back should a resume go?</h5>
+                        <span>"Your personal summary and contact information should be at the very top of your resume,
+                            followed by your most recent and relevant work experiences."</span>
+                        <hr>
+                        <h5 class="fw-bold ">What’s the recommended layout for a resume?</h5>
+                        <span>"A resume is a document that provides a summary of a person’s work experience, skills,
+                            education, and accomplishments. Resumes are typically used when applying for a job to
+                            showcase an individual’s qualifications for a specific role."</span>
+                        <hr>
+                        <h5 class="fw-bold ">Is it free to create resumes in ResumeCraft?</h5>
+                        <span>"You can make and save as many resumes as you’d like in ResumeCraft for free. Tons of free
+                            resume templates are readily available for you to start customizing with your own
+                            professional experiences and background to fit the industry you’re applying for."</span>
+                        <hr>
+                        <h5 class="fw-bold ">How do I add multiple pages to my resume?</h5>
+                        <span>"To add multiple pages to your resume, duplicate your first page and use it as a template
+                            to create the second. You can add as many pages to your resume as you’d like."</span>
+                        <hr>
+                        <h5 class="fw-bold ">What’s should I include in a professional resume?</h5>
+                        <span>"Resumes are the perfect opportunity to tell recruiters who you are before you chat with
+                            them. At first glance, your resume should include:
+
+                            &#x2022;Your contact information.
+                            &#x2022;A professional summary that shows them who you are.
+                            &#x2022;All of your professional experiences, aligned to the job you’re applying for.
+                            Skills, education, and notable projects.
+                            Any certifications or qualifications."</span>
+                        <hr>
+
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Section 5 End -->
+    </main>
+
+    
+  <%- include('./footer.ejs') %>

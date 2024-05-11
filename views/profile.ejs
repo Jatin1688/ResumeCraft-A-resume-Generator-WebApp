@@ -1,0 +1,179 @@
+
+<%- include('./header.ejs') %>
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="text-center ">
+    <% if(message.length> 0){ %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+      <% } %>
+  </div>
+  <!-- update password modal -->
+  <div class="modal fade" id="updatepassword" tabindex="-1" role="dialog">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="font-family: Arial, Helvetica, sans-serif;">Update Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+         
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+          <h2 class="text-ceneter  mb-3">Change Password</h2>
+          
+          <form action="/passwordupdate" method="post" enctype="multipart/form-data">
+            <label for="" class="">old password:</label>
+            <input class="form-control  mb-4" type="password" name="old_password" placeholder="old_Password">
+            <label for="" class=""> new password:</label>
+            <input class="form-control  mb-4" type="password" name="new_password" placeholder="new_Password">
+            <label for="" class="">confirm password:</label>
+            <input class="form-control  mb-2" id="myInput" type="password" name="cpassword" placeholder=" confirm_Password">
+            <label for="" class="">Show Password</label>
+            <input class="mb-4" onclick="myFunction()" type="checkbox">
+            <button type="submit" class="btn btn-primary form-control px4">Update_password</button>
+          </form>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- update password modal end -->
+
+  <!-- update profile modal -->
+  <div class="modal fade" id="updateprofile" tabindex="-1" role="dialog">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"> edit profile </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 class="text-ceneter mb-3">Update Profile</h2>
+          <form action="/profileupdate/<%=t._id %> " class="mb-4" method="post" enctype="multipart/form-data">
+            <label for="" class="">first name:</label>
+            <input class="form-control  mb-4" type="text" name="firstname" value="<%=t.firstname%>"
+              placeholder="First Name">
+              <label for="" class="">Last name:</label>
+            <input class="form-control  mb-4" type="text" name="lastname" value="<%=t.lastname%>"
+              placeholder=" Last Name">
+              <label for="" class="">email:</label>
+            <input class="form-control  mb-4" type="text" name="email" value="<%=t.email %>" placeholder=" Email" readonly>
+
+
+            <div class="mt-3  mb-4">
+              <label for="">Profile image</label>
+              <input type="file" class="form-control form-control-lg" name="image" placeholder="image">
+            </div>
+            <span class=" mb-4">
+
+              <button class="btn btn-primary form-control px4" type="submit ">Update Profile</button>
+            </span>
+            <!-- <h4 class=" ms-5 mb-4 "  > <span >Submit</span> </h4> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- update profilemodal end -->
+
+  <!-- <h2 class="text-ceneter mb-3">Update Profile</h2> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-4">
+        <h3 class=" mb-3" style="font-family:cursive;font-weight:bold;">profile</h3>
+
+        <!-- profile front -->
+        <form action=" " class="mb-4" method="post" enctype="multipart/form-data">
+          <label for="" style="font-family:cursive;font-weight:bold;font-size:22px;">first name :</label>
+          <input class="form-control  mb-4"  type="text" name="firstname" value="<%=t.firstname%>" readonly
+            placeholder="First Name">
+          <label for="" style="font-family:cursive;font-weight:bold;font-size:22px;">Last name :</label>
+          <input class="form-control  mb-4" type="text" name="lastname" value="<%=t.lastname%>" readonly
+            placeholder=" Last Name">
+            <label for="" style="font-family:cursive;font-weight:bold;font-size:22px;">Email :</label>
+          <input class="form-control  mb-" type="text" name="email" value="<%=t.email %>" readonly placeholder=" Email">
+
+
+
+          <!-- <span class=" mb-4">
+
+        <button class="btn btn-primary form-control px4" type="submit ">Update Profile</button>
+       </span> -->
+          <!-- <h4 class=" ms-5 mb-4 "  > <span >Submit</span> </h4> -->
+        </form>
+        <!-- profile front end -->
+        <div class="d-flex">
+            <a href="" data-bs-toggle="modal" data-bs-target="#updateprofile">
+             <h4 class="px-2"><span class="btn btn-primary">edit profile</span> </h4>
+
+            </a>
+            <a href="" data-bs-toggle="modal" data-bs-target="#updatepassword">
+             <h4 class="ms-2 "><span class="btn btn-primary">change password</span> </h4>
+
+            </a>
+        </div>
+        <!-- display flex end -->
+
+      </div>
+      <!-- col-md-4 end -->
+      <div class="col-md-1"></div>
+      <div class="col-md-4   mb-4">
+        <img src="<%=img.url %>" class="rounded-circle" height="350px" width="350px" alt="profile image">
+        <label for="" class=" ms-5" style="font-family:cursive;font-weight:bold;font-size:22px;">Profile image</label>
+      </div>
+    </div>
+    <!-- row end -->
+  </div>
+  <!-- container end -->
+
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <%- include('./footer.ejs') %>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <link rel="stylesheet" href="/css/resumetemplate1.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap"
+            rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+      <style>
+            body {
+                  background: rgb(204, 204, 204);
+                  width: 21cm;
+                  height: 29.7cm;
+                  margin: 0 auto;
+            }
+
+            page {
+                  background: white;
+                  display: block;
+                  margin: 0 auto;
+                  margin-bottom: 0.5cm;
+                  position: relative;
+            }
+
+            page[size="A4"] {
+                  width: 21cm;
+                  height: auto;
+            }
+
+            @page {
+                  size: 21cm 29.7cm;
+                  margin: 0mm;
+            }
+
+            @media print {
+                  .hidden-print {
+                        display: none !important;
+                  }
+            }
+            
+            .custom-line {
+      border-top: 3px solid black; /* Change the width as needed */
+    }
+  </style>
+      </style>
+</head>
+
+<body>
+
+      <!-- <button type="button" class="btn btn-dark " onclick="generateresume()">hello</button> -->
+
+      <page size="A4">
+            <div class="container">
+                  <!-- left panel of resume template start -->
+                  <div class="leftPanel">
+                        <img src="<%=image.url %>"
+                              class="rounded-circle " id="imageinput" />
+                        <!-- <img src="https://i.pinimg.com/originals/3f/b3/ce/3fb3ce89059bd129352cbee229d68952.jpg"
+                              class="rounded-circle " id="imageinput" /> -->
+                        <div class="details">
+                              <!-- contact start -->
+                              <div class="item bottomLineSeparator">
+                                    <h2 class="fw-bold ">
+                                          CONTACT
+                                    </h2>
+                                    <div class="smallText  w-100">
+                                          <p  class="">
+                                                <i class="fa fa-phone contactIcon" aria-hidden="true"></i>
+                                                <span id="phonenumbert1">(+33) 777 777 77</span>
+
+                                          </p>
+
+                                          <p class="word-wrap-break ">
+                                                <i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>
+                                                <span id="addresst1"> New York, USA</span>
+                                          </p>
+
+                                          <p class="wrap-text ">
+                                                <i class="fa fa-envelope contactIcon" aria-hidden="true"></i>
+                                                <span class=" ">
+
+                                                      <a  id="emailt1" href="lorem@ipsum.com@gmail.com">
+                                                            
+                                                            lorem@ipsum.com
+                                                      </a>
+                                                </span>
+                                          </p>
+
+                                          <p class="wrap-text ">
+                                                <i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i>
+                                                <span class="  ">
+                                                      
+                                                      <a id="linkedint1" href="#">
+                                                            in/loremipsum
+                                                      </a>
+                                                </span>
+                                          </p>
+                                          <p class="wrap-text lastParagrafNoMarginBottom">
+                                                <i class="fa-brands fa-github"></i>
+                                                <a id="githubt1" href="#">
+                                                      loremipsum
+                                                </a>
+                                          </p>
+                                    </div>
+                              </div>
+                              <!-- contact end -->
+
+                              <!-- skill section start -->
+                              <div class="item bottomLineSeparator">
+                                    <h2 class="fw-bold ">
+                                          SKILLS
+                                    </h2>
+                                    <div class="smallText" id="skill">
+                                          <div class="d-inline-flex ">
+                                                <div class="skill">
+                                                      <div>
+                                                            <span>Accounting</span>
+                                                      </div>
+
+                                                </div>
+                                                <div class="skill">
+                                                      <div>
+                                                            <span>Word</span>
+                                                      </div>
+
+                                                </div>
+                                          </div>
+                                          <div class="d-inline-flex ">
+                                                <div class="skill">
+                                                      <div>
+                                                            <span>Powerpoint</span>
+                                                      </div>
+
+                                                </div>
+                                                <div class="skill">
+                                                      <div>
+                                                            <span>Powerpoint</span>
+                                                      </div>
+
+                                                </div>
+                                          </div>
+
+
+                                    </div>
+                              </div>
+                              <!-- skill section end -->
+
+                             
+                              <div class="item ">
+                                    <h2 class="fw-bold">
+                                          Interest
+                                    </h2>
+                                    <div class="smallText " id="hobbies">
+                                          <div class="d-flex flex-wrap  gap-1">
+                                                <h6 class="text-bg-light  mt-1 p-1 rounded-2 ">Cricket </h6>
+                                                <h6 class="text-bg-light   mt-1 p-1 rounded-2 ">Cricket </h6>
+                                                <h6 class="text-bg-light   mt-1 p-1 rounded-2 ">Cricket </h6>
+                                          </div>
+
+
+                                    </div>
+                              </div>
+                              <!-- education section end -->
+                        </div>
+                  </div>
+                  <!-- left panel of resume template end -->
+
+                  <!-- right panel of resume template start -->
+                  <div class="rightPanel">
+                        <!--name panel start  -->
+                        <div>
+                              <h1 id="namet1" class="fw-semibold ">
+                                    Jhon Doe
+                              </h1>
+                              <div class="smallText fw-light ">
+                                    <h3 id="positiont1">
+                                          Accountant
+                                    </h3>
+                              </div>
+                        </div>
+                        <!-- name panel end -->
+
+                        <!--about start  -->
+                        <div>
+                              <h2 class="fw-bold ">
+                                    About me
+                              </h2>
+                              <hr class="m-0 opacity-100 custom-line" >
+                              <div class="smallText">
+                                    <p id="aboutt1">
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis,
+                                          justo sed feugiat pulvinar., quam ipsum tincidunt enim, ac gravida est metus
+                                          sit amet neque. Curabitur ut arcu ut nunc finibus accumsan id id elit.
+                                    </p>
+                                    <!-- <p>
+                                          Vivamus non magna quis neque viverra finibus quis a tortor.
+                                    </p> -->
+                              </div>
+                        </div>
+                        <!-- about end -->
+
+ <!-- education section start -->
+ <div class="item bottomLineSeparator">
+      <h2 class="fw-bold ">
+            EDUCATION
+      </h2>
+      <hr class="m-0 opacity-100 custom-line" >
+      <div class="smallText" id="education">
+            <p class="bolded white">
+                  Bachelor of Economics
+            </p>
+            <p>
+                  The University of Sydney
+            </p>
+            <p>
+                  2010 - 2014
+            </p>
+      </div>
+</div>
+<!-- education section end -->
+
+                        <!-- work experience start -->
+                        <div class="workExperience">
+                              <h2 class="fw-bold">
+                                    Work experience
+                              </h2>
+                              <hr class="m-0 opacity-100 custom-line mb-1 " >
+                              <ul id="workexperience">
+                                    <li>
+                                          <div class="jobPosition">
+                                                <span class="bolded">
+                                                      Accountant
+                                                </span>
+                                                <span>
+                                                      4-04-2014 - 5-06-2015
+                                                </span>
+                                          </div>
+                                          <div class="projectName bolded">
+                                                <span>
+                                                      Accounting project name | Company name
+                                                </span>
+                                          </div>
+                                          <div>
+                                                <ul>
+                                                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                                            Quisquam aperiam, in ipsa aliquam voluptatibus animi!
+                                                            Voluptas ducimus ratione molestiae explicabo atque autem
+                                                            minus. Sequi consectetur rerum ex et temporibus magnam?</li>
+                                                </ul>
+                                          </div>
+                                    </li>
+                                    <li>
+                                          <div class="jobPosition">
+                                                <span class="bolded">
+                                                      Digital Marketing Expert
+                                                </span>
+                                                <span>
+                                                      Nov 2020 - Sept 2021
+                                                </span>
+                                          </div>
+                                          <div class="projectName bolded">
+                                                <span>
+                                                      Project name | Company name
+                                                </span>
+                                          </div>
+                                    </li>
+                                    <li>
+                                          <div class="jobPosition">
+                                                <span class="bolded">
+                                                      Accountant
+                                                </span>
+                                                <span>
+                                                      Jun 2017 - May 2020
+                                                </span>
+                                          </div>
+                                          <div class="projectName bolded">
+                                                <span>
+                                                      Project name | Company name
+                                                </span>
+                                          </div>
+                                    </li>
+                              </ul>
+                        </div>
+                        <!--work experience end  -->
+                  </div>
+            </div>
+            <!-- right panel of resume template end -->
+      </page>
+
+      <div class="text-center ">
+
+            <button class="btn btn-primary my-4  " id="myButton" onclick="hideButton()">Print</button>
+      </div>
+
+      <!-- <page size="A4">
+      </page> -->
+      <script src="/js/template1.js"></script>
+
+</body>
+
+</html>

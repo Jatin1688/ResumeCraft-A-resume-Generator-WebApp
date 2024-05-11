@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- website Description -->
+    <meta name="description"
+        content="Your go-to destination for all Forge Your Professional Future with ResumeCraft." />
+
+    <!-- Website LOGO -->
+    <link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon" />
+
+    <!-- Website title -->
+    <title>
+        <%=x%>
+    </title>
+    
+
+    <!-- Website Styling (External CSS)-->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- BootStrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+    <!-- FontAwesome CDN link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" />
+    <!-- FontAwesome CDN link-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .resumeInfo li {
+            list-style-type: circle;
+            text-align: justify;
+        }
+
+        .scrollable {
+            height: 60vh;
+            width: 100%;
+            overflow: auto;
+        }
+
+        .online-mention {
+            box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+            background-color: #21D4FD;
+            background-image: linear-gradient(45deg, #21d5fd 0%, #b921ff 100%);
+            padding: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 60px;
+            margin-bottom: 80px;
+
+        }
+
+        @media (min-width: 600px) {
+            .scrollable {
+                border: none;
+                overflow: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <!-- navbar Start -->
+        <nav class="navbar navbar-light fixed-top navbar-expand-md">
+            <div class="container-fluid">
+                <!-- mobile-view -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- mobile-view End-->
+
+                <!-- weblogo start -->
+              
+                <% if(!tok){ %>
+                    <a href="/" class="navbar-brand">
+                        <img src="/image/moblogo.png" alt="weblogo" class="weblogo" />
+                        <img src="/image/desklogo.png" alt="weblogo" class="moblogo" />
+                    </a>
+                    <% }else{ %>
+                        <a href="/home" class="navbar-brand">
+                            <img src="/image/moblogo.png" alt="weblogo" class="weblogo" />
+                            <img src="/image/desklogo.png" alt="weblogo" class="moblogo" />
+                        </a>
+                    <% } %>
+                <!-- weblogo End -->
+
+                <!-- mobile-view -->
+                <div class="d-hide">
+                    <ul class="navbar-nav">
+                        <li>
+                            <!-- <div><i class="fa-regular fa-user fa-xl"></i></div>
+                             -->
+                             <% if(!tok){ %>
+ 
+                                <h6 class="btn-md button-md shadow-lg"><span><a href="/login"class="text-decoration-none text-white  ">Log in</a> </span> </h6>
+                               <% }else{ %>
+                                   <div class="dropdown">
+                                       <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                         Dropdown button
+                                       </button> -->
+                                       <a href="/profile/_id" class="m-0 p-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                           <img src="<%=img.url %>" height="50px" width="60px" class="me-3 rounded-circle" alt="">
+                                         </a>
+                                       <ul class="dropdown-menu">
+                                         <li><a class="dropdown-item" href="/profile">Account Page</a></li>
+                                         <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                                         <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                                       </ul>
+                                     </div>
+                               <% } %>
+                        </li>
+                    </ul>
+                </div>
+                <!-- mobile-view End-->
+
+                 
+                <!-- Menu start -->
+                <div class="navbar-collapse collapse text-center" id="nav">
+                    <ul class="navbar-nav ms-auto">
+                        <hr />
+                        <% if(!tok){ %>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link links">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="/buildResume" class="nav-link links">Build a Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/resumeGuide" class="nav-link links">Resume Guide</a>
+                        </li>
+                        <% }else{ %>
+                            <li class="nav-item">
+                                <a href="/home" class="nav-link links">Home</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="/buildResume1" class="nav-link links">Build a Resume</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/resumeGuide1" class="nav-link links">Resume Guide</a>
+                            </li>
+                        <% } %>
+                        <hr />
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="m-hide mr-10">
+                           
+                        </li>
+                        <li class="m-hide mr-10">
+                            
+                        </li>
+                        <li class="m-hide mr-10">
+                            <% if(!tok){ %>
+ 
+                                 <h6 class="btn-md button-md shadow-lg"><span><a href="/login"class="text-decoration-none text-white  ">Log in</a> </span> </h6>
+                                <% }else{ %>
+                                    <div class="dropdown">
+                                        <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Dropdown button
+                                        </button> -->
+                                        <a href="/profile/_id" class="m-0 p-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                            <img src="<%=img.url %>" height="50px" width="60px" class="me-3 rounded-circle" alt="">
+                                          </a>
+                                        <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item" href="/profile">Account Page</a></li>
+                                          <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                                          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                                        </ul>
+                                      </div>
+                                <% } %>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Menu End -->
+            </div>
+        </nav>
+        <!-- navbar End -->
+    </header>

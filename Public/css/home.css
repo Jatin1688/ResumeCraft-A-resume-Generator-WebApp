@@ -1,0 +1,31 @@
+.weblogo{
+  width: auto;
+  height: 90px;
+
+}
+.imgh{
+   /* display: none!important; */
+}
+.writesize{
+    font-size: 25px !important;
+    padding:10px !important;
+}
+.imgfi{
+    width:363px!important;
+    height:306px!important;
+}
+.isize{
+    font-size:45px;
+     color:dark;
+}
+@media(max-width:768px){
+    .weblogo{
+        width: auto;
+        height: 50px;
+      
+      }
+      .imgh{
+        width:50px!important;
+        height:50px!important;
+      }
+}

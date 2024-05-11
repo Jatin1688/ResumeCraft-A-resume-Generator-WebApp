@@ -1,0 +1,10 @@
+/* body{
+    background-color: ;
+} */
+.hr{
+    margin: 0 !important;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: 1;
+}
